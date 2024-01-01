@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/logo_small.png">
+    <link rel="stylesheet" href="/css/mainstyle.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <script src="script.js"></script>
+    <title>Kochwelt-Startseite</title>
+</head>
+<body onload="includeHTML()">
+    <div class="relative">
+        <div class="content">
+            <!-- Headerbereich mmit Navigation von David -->
+            <div w3-include-html="templ/header.html"></div>
+            <!-- Vorschau Random Rezept von Phillip -->
+            <div w3-include-html="templ/div1_template.html"></div>
+
+            <!-- Lust auf Neues von Christin -->
+            <div w3-include-html="templ/div2_template.html"></div>
+
+            <!-- Vorschau Random Rezept von Phillip -->
+            <div w3-include-html="templ/div3_template.html"></div>
+        </div>
+        <!-- Footerbereich von David -->
+        <footer id="footer" w3-include-html="templ/footer.html"></footer>
+    </div>
+</body>
+</html>

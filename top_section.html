@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="top_section.css" />
+
+    <script>
+      // erzeugt eine temporäre div mit der class="overlay"
+      function openImage() {
+        const imageUrl = document.getElementById('image').getAttribute('src'); // Get the image source dynamically
+        const overlay = document.createElement("div");
+        overlay.className = "overlay";
+
+        // erzeugt eine temporäres img mit der class="enlarged-img"
+        const enlargedImg = document.createElement("img");
+        enlargedImg.className = "enlarged-img";
+        enlargedImg.src = imageUrl;
+
+        //CSS-Klasse beachten
+        overlay.appendChild(enlargedImg);
+        document.body.appendChild(overlay);
+
+        //onclick auf Element um die function zu schließen
+        overlay.onclick = function () {
+          document.body.removeChild(overlay);
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div class="top_section">
+      <h1>Griechischer Bauernsalat</h1>
+      <img
+        onclick="openImage('../Gruppenarbeit - Kochwelt/03 - Gruppenarbeit - Kochwelt/img/salad.jpg')"
+        id="image"
+        class="vorschau"
+        src="../Gruppenarbeit - Kochwelt/03 - Gruppenarbeit - Kochwelt/img/salad.jpg"
+        alt="image"
+      />
+      <div class="shortinfo">
+        <div class="tag">
+          <img
+            src="../Gruppenarbeit - Kochwelt/03 - Gruppenarbeit - Kochwelt/img/icons/clock-regular.svg"
+            alt="img.clock"
+          />
+          15 Min.
+        </div>
+        <div class="tag">
+          <img
+            src="../Gruppenarbeit - Kochwelt/03 - Gruppenarbeit - Kochwelt/img/icons/brain-solid.svg"
+            alt="img.difficult"
+          />
+          simple
+        </div>
+        <div class="tag">
+          <img
+            src="../Gruppenarbeit - Kochwelt/03 - Gruppenarbeit - Kochwelt/img/icons/calendar-alt-regular.svg"
+            alt="img.calendar"
+          />
+          28.09.2020
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

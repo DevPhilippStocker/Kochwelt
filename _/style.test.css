@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.logo-start {
+    width: 200px;
+    object-fit: contain;
+}
+nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+.header {
+    display: flex;
+    /* height: 80px; */
+    justify-content: space-between;
+    margin: 0 80px;
+}
+.header-underline {
+    background: linear-gradient(to bottom, #E7E7E7, white);
+}
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+}
+.nav-link:hover{
+    color: #008000;
+    text-decoration: underline;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 28px;
+}
+footer {
+    height: 200px;
+    background-color: #3f3b3b;
+}
+
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  nav a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #3498db; /* Farbe der aufbauenden Underline */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  
+  nav a:hover {
+    color: #3498db; /* Farbe ändern, wenn Maus über Link */
+  }
+  
+  nav a:hover:before {
+    transform: scaleX(1); /* Underline aufbauen, wenn Maus über Link */
+  }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: raleway;
+        font-size: 18px;
+        max-width: 100%;
+      }
+
+      .rechner {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+      }
+
+      .portion-part {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      .tr-bg{
+        display: flex;
+        background-color: green;
+        background-size: contain;
+        border-radius: 10px;
+      }
+
+       tr {
+        display: flex;
+        flex-direction: row;
+      }
+
+      td {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 20px; 
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="rechner">
+      <div class="portion-part">
+        <label for="multiplier">Multiplikator:</label
+        ><input
+          type="number"
+          id="multiplier"
+          value="1"
+          min="1"
+          max="20"
+        /><button id="calculateButton">Berechnen</button>
+      </div>
+      <table id="myTable">
+        <tr class="tr-bg">
+          <td class="value">300</td>
+          <td>gr. Mehl</td>
+        </tr>
+        <tr>
+          <td class="value">300</td>
+          <td>gr. Mehl</td>
+        </tr>
+        <tr class="tr-bg">
+          <td class="value">1.5</td>
+          <td>Eier</td>
+        </tr>
+        <tr>
+          <td class="value">300</td>
+          <td>gr. Mehl</td>
+        </tr>
+        <tr class="tr-bg">
+          <td class="value">300</td>
+          <td>gr. Mehl</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      let table = document.getElementById("myTable");
+
+      let originalValues = [];
+
+      let valueCells = document.querySelectorAll(".value");
+      valueCells.forEach(function (cell) {
+        let originalValue = parseFloat(cell.textContent);
+        if (!isNaN(originalValue)) {
+          originalValues.push(originalValue);
+        }
+      });
+
+      let calculateButton = document.getElementById("calculateButton");
+
+      calculateButton.addEventListener("click", function () {
+        let multiplier = parseFloat(
+          document.getElementById("multiplier").value
+        );
+
+        valueCells.forEach(function (cell, index) {
+          let originalValue = originalValues[index];
+          let newValue = originalValue * multiplier;
+          cell.textContent = newValue;
+        });
+      });
+    </script>
+  </body>
+</html>

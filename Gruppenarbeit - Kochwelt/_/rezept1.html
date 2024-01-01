@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/logo_small.png" />
+    <link rel="stylesheet" href="/css/mainstyle.css" />
+    <link rel="stylesheet" href="/css/substyle.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <script src="script.js"></script>
+
+    <title>Kochwelt-Rezepte</title>
+  </head>
+
+  <body onload="includeHTML()">
+    <div class="relative">
+      <div class="content">
+        <div w3-include-html="templ/header.html"></div>
+
+        <div class="top_section">
+          <h1>Wiener Schnitzel</h1>
+          <img class="vorschau" src="/img/schnitzel.jpg" alt="image" />
+          <div class="shortinfo">
+            <div class="tag">
+              <img src="/img/icons/clock-regular.svg" alt="img.clock" /> 15 Min.
+            </div>
+            <div class="tag">
+              <img src="/img/icons/brain-solid.svg" alt="img.difficult" />
+              simple
+            </div>
+            <div class="tag">
+              <img
+                src="/img/icons/calendar-alt-regular.svg"
+                alt="img.calendar"
+              />
+              28.09.2020
+            </div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+        <div class="rechner">
+          <div class="portion-part">
+            <label class="label-recipe" for="multiplier">Zutaten für:</label>
+            <input type="number" id="multiplier" value="1" min="1" max="20">
+            <button id="calculateButton" class="button button-mgl d_on" onclick="zutatenrechner()">
+              Portionen
+            </button>
+          </div>
+          <table id="myTable">
+            <tr class="tr-bg">
+              <td class="value">100</td>
+              <td>g Kalbschnitzel</td>
+            </tr>
+            <tr>
+              <td class="value">1</td>
+              <td>Eier(r)</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value">12</td>
+              <td>ml Sahne</td>
+            </tr>
+            <tr>
+              <td>n.B.</td>
+              <td>Semmelbrösel</td>
+            </tr>
+            <tr class="tr-bg">
+              <td>n.B.</td>
+              <td>Mehl</td>
+            </tr>
+            <tr>
+              <td class="value">1</td>
+              <td>Prise(n) Salz</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value">1</td>
+              <td>Prise(n) Pfeffer</td>
+            </tr>
+            <tr>
+              <td>viel</td>
+              <td>Öl zum Braten</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="preparation">
+          <h2>Zubereitung</h2>
+          <div class="shortinfo">
+            <div class="tag">
+              <img
+                src="/img/icons/clock-regular.svg"
+                alt="Zubereitungszeit"
+              />ca.15 Minuten
+            </div>
+            <div class="tag">
+              <img
+                src="/img/icons/clock-regular.svg"
+                alt="Zubereitungszeit Gesamt"
+              />Gesamtzeit ca. 15 Minuten
+            </div>
+          </div>
+          <div>
+            <p>
+              Vorbereitung der Schnitzel:
+
+Die Kalbsschnitzel zwischen zwei Stücken Plastikfolie legen und vorsichtig flach klopfen, bis sie dünn und gleichmäßig sind. Dadurch wird das Fleisch zarter und gleichzeitig dünn genug für die Panade.
+Panieren der Schnitzel:
+Legen Sie drei flache Teller vor sich hin. Auf den ersten Teller geben Sie Mehl. Auf den zweiten Teller geben Sie verquirlte Eier (mit einer Prise Salz und Pfeffer gewürzt). Auf den dritten Teller geben Sie Semmelbrösel.
+Nehmen Sie ein Kalbsschnitzel, wenden Sie es zuerst im Mehl, dann in den verquirlten Eiern und schließlich in den Semmelbröseln. Stellen Sie sicher, dass das Schnitzel gut mit den Semmelbröseln bedeckt ist und leicht klopft, um überschüssige Brösel abzuschütteln. Wiederholen Sie diesen Vorgang für alle Schnitzel.
+Braten der Schnitzel:
+Erhitzen Sie in einer großen Pfanne ausreichend Pflanzenöl, um die Schnitzel darin zu frittieren. Das Öl sollte etwa 1-2 Zentimeter tief sein und eine Temperatur von etwa 170-180 Grad Celsius haben.
+
+Legen Sie die panierten Schnitzel vorsichtig in das heiße Öl. Achten Sie darauf, die Pfanne nicht zu überfüllen, damit die Schnitzel ausreichend Platz zum Braten haben. Braten Sie sie auf jeder Seite etwa 2-3 Minuten lang oder bis sie goldbraun und knusprig sind.
+
+Servieren:
+
+Nehmen Sie die gebratenen Schnitzel aus der Pfanne und lassen Sie sie auf Küchenpapier abtropfen, um überschüssiges Öl zu entfernen. Servieren Sie die Wiener Schnitzel sofort, garniert mit Zitronenscheiben. Traditionell werden sie oft mit Kartoffelsalat oder Preiselbeeren serviert.
+Genießen Sie Ihr selbstgemachtes Wiener Schnitzel!
+            </p>
+          </div>
+          <h3>Rezept erstellt von</h3>
+          <div class="created-user">
+            <img src="/img/SPOILER_IMG_40381.jpg" />
+            <p>Christin</p>
+          </div>
+        </div>
+      <footer w3-include-html="templ/footer.html"></footer>
+    </div>
+  </body>
+</html>

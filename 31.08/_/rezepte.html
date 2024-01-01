@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/logo_small.png">
+    <link rel="stylesheet" href="/css/mainstyle.css">
+    <link rel="stylesheet" href="/css/substyle.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <script src="script.js"></script>
+    <title>Kochwelt-Rezepte</title>
+</head>
+<body onload="includeHTML()">
+    <div class="relative">
+        <div class="content">
+            <div w3-include-html="templ/header.html"></div>
+
+            <div w3-include-html="templ/top_section.html"></div>
+
+            <!-- Rezepte inkl. Rechner von Christin -->
+            <!-- <div w3-include-html="templ/.html"></div> -->
+
+            <div w3-include-html="templ/preparation_section.html"></div>
+        </div>
+        <footer w3-include-html="templ/footer.html"></footer>
+    </div>
+</body>
+</html>
