@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/logo_small.png" />
+    <link rel="stylesheet" href="/css/mainstyle.css" />
+    <link rel="stylesheet" href="/css/substyle.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <script src="script.js"></script>
+
+    <title>Kochwelt-Rezepte</title>
+  </head>
+
+  <body onload="includeHTML()">
+    <div class="relative">
+      <div class="content">
+        <div w3-include-html="templ/header.html"></div>
+
+        <div class="top_section">
+          <h1>selbstgemachte Pizza</h1>
+          <img class="vorschau" src="/img/pizza.jpg" alt="image" />
+          <div class="shortinfo">
+            <div class="tag">
+              <img src="/img/icons/clock-regular.svg" alt="img.clock" /> 120 Min.
+            </div>
+            <div class="tag">
+              <img src="/img/icons/brain-solid.svg" alt="img.difficult" />
+              normal
+            </div>
+            <div class="tag">
+              <img
+                src="/img/icons/calendar-alt-regular.svg"
+                alt="img.calendar"
+              />
+              02.09.2023
+            </div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+        <div class="rechner">
+          <div class="portion-part">
+            <label class="label-recipe" for="multiplier">Zutaten für:</label>
+            <input type="number" id="multiplier" value="1" min="1" max="20" />
+            <button id="calculateButton" class="button button-mgl d_on" onclick="zutatenrechner()">
+              Portionen
+            </button>
+          </div>
+          <table id="myTable">
+            <tr class="tr-bg">
+              <td class="value">200</td>
+              <td>g Mehl</td>
+            </tr>
+            <tr>
+              <td class="value">0.25</td>
+              <td>TL Salz</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value">1</td>
+              <td>Pck. Trockenhefe</td>
+            </tr>
+            <tr>
+              <td class="value">2</td>
+              <td>EL Olivenöl</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value">125</td>
+              <td>ml Milch (lauwarm)</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="preparation">
+          <h2>Zubereitung</h2>
+          <div class="shortinfo">
+            <div class="tag">
+              <img
+                src="/img/icons/clock-regular.svg"
+                alt="Zubereitungszeit"
+              />ca.20 Minuten
+            </div>
+            <div class="tag">
+              <img
+                src="/img/icons/clock-regular.svg"
+                alt="Zubereitungszeit Gesamt"
+              />Gesamtzeit ca. 120 Minuten
+            </div>
+          </div>
+          <div>
+            <p>
+              Alles in eine Schüssel geben und die Zutaten mit einenader zu einer homogenen Masse verkneten. Danach den Teig etwa 30 Minuten abgedeckt gehen lassen </p>
+<p>Nach dem gehen lassen den Teig auf eine bemehlte geben und halbieren und die Teigkugeln nochmal mit der Hand durchkneten und ausrollen</p>
+<p>Nun die Pizza nach Geschmack mit Tomatensoße oder Olivenöl bestreichen und mit gewünschten Zutaten belegen</p>
+<p>Die Pizza bei 180°C für 15-20 Minuten backen</p>
+          </div>
+          <div class="spacer-recept"></div>
+        </div>
+      <footer w3-include-html="templ/footer.html"></footer>
+    </div>
+  </body>
+</html>

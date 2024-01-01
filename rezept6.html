@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/logo_small.png" />
+    <link rel="stylesheet" href="/css/mainstyle.css" />
+    <link rel="stylesheet" href="/css/substyle.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <script src="script.js"></script>
+    <title>Kochwelt-Rezepte</title>
+  </head>
+  <body onload="includeHTML()">
+    <div class="relative">
+      <div class="content">
+        <div w3-include-html="templ/header.html"></div>
+
+        <div class="top_section">
+          <h1>selbstgemachten Chickenburger</h1>
+          <img class="vorschau" src="/img/chickenburger.jpg" alt="image" />
+          <div class="shortinfo">
+            <div class="tag">
+              <img src="/img/icons/clock-regular.svg" alt="img.clock" /> 100
+              Min.
+            </div>
+            <div class="tag">
+              <img src="/img/icons/brain-solid.svg" alt="img.difficult" />
+              simple
+            </div>
+            <div class="tag">
+              <img
+                src="/img/icons/calendar-alt-regular.svg"
+                alt="img.calendar"
+              />
+              16.11.2023
+            </div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+        <div class="rechner">
+          <div class="portion-part">
+            <label class="label-recipe" for="multiplier">Zutaten für:</label>
+            <input type="number" id="multiplier" value="1" min="1" max="20" />
+            <button
+              id="calculateButton"
+              class="button button-mgl d_on"
+              onclick="zutatenrechner()"
+            >
+              Portionen
+            </button>
+          </div>
+          <table id="myTable">
+            <tr class="tr-bg">
+              <td class="value">450</td>
+              <td>gr Mehl</td>
+            </tr>
+            <tr>
+              <td class="value">2</td>
+              <td>TL Salz</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value">40</td>
+              <td>gr Butter</td>
+            </tr>
+            <tr>
+              <td class="value">200</td>
+              <td>ml Milch</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value">1</td>
+              <td>Pck Trockenhefe</td>
+            </tr>
+            <tr>
+              <td class="value"></td>
+              <td>Wasser zum besprühen</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value"></td>
+              <td>Sesam zum bestreuen</td>
+            </tr>
+            <tr>
+              <td class="value">1200</td>
+              <td>gr Hänchenbrustfillet</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value">2</td>
+              <td>Eier Größe L</td>
+            </tr>
+            <tr>
+              <td class="value"></td>
+              <td>reichlich Mehl</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value"></td>
+              <td>Cornflakes</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="preparation">
+          <h2>Zubereitung</h2>
+          <div class="shortinfo">
+            <div class="tag">
+              <img
+                src="/img/icons/clock-regular.svg"
+                alt="Zubereitungszeit"
+              />ca.30 Minuten
+            </div>
+            <div class="tag">
+              <img
+                src="/img/icons/clock-regular.svg"
+                alt="Zubereitungszeit Gesamt"
+              />Gesamtzeit ca. 100 Minuten
+            </div>
+          </div>
+          <div>
+            <h3>Burger Buns</h3>
+            <p>
+              Zuerst die Butter in einem Topf schmelzen lassen, sobald die
+              Butter geschmolzen ist die Milch und die Hefe dazu geben (wichtig
+              nicht kochen lassen)
+            </p>
+            <p>
+              Nun das Mehl in eine Schüssel geben und das Butter Gemisch
+              unterrühren und den ganzen Teig gut verkneten.
+            </p>
+            <p>Nach dem vermengen den Teig für 30-45 Minuten ruhen lassen</p>
+            <p>
+              Nun den Teig auf eine bemehlte Fläche geben und 6-8 Burgerbrötchen
+              daraus schneiden und leicht flach drücken. Diese dann abgedeckt
+              nochmal 30 Minuten gehen lassen
+            </p>
+            <p>
+              Die Teiglinge auf ein Backblech geben etwas Sesam mit hilfe von
+              Wasser auf die Brötchen streuen und bei 180°C Ober-Unterhitze für
+              15-30 Minuten backen lassen
+            </p>
+
+            <h3>Chicken Pattys</h3>
+            <p>Die Hähnchenbrust nach und nach in den Mixer geben und zerkleinern, Danach das zerkleinerte Hähnchen in Portionsgrößen mit je 150 - 200 gr abwiegen.</p>
+            <p>Danach die Portionen mit dem Burgermaker platt drücken und durch die Panierstraße geben</p>
+            <p>Am Ende in Öl raus frittieren oder in einer Pfanne mit reichlich Öl beidseitig rausbraten und servieren</p>
+          </div>
+          <div class="spacer-recept"></div>
+        </div>
+      </div>
+      <footer w3-include-html="templ/footer.html"></footer>
+    </div>
+  </body>
+</html>

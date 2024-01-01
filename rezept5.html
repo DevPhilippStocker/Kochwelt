@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/logo_small.png" />
+    <link rel="stylesheet" href="/css/mainstyle.css" />
+    <link rel="stylesheet" href="/css/substyle.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <script src="script.js"></script>
+    <title>Kochwelt-Rezepte</title>
+  </head>
+  <body onload="includeHTML()">
+    <div class="relative">
+      <div class="content">
+        <div w3-include-html="templ/header.html"></div>
+
+        <div class="top_section">
+          <h1>selbstgemachte Pasta</h1>
+          <img class="vorschau" src="/img/pasta-1181189_640.jpg" alt="image" />
+          <div class="shortinfo">
+            <div class="tag">
+              <img src="/img/icons/clock-regular.svg" alt="img.clock" /> 40 Min.
+            </div>
+            <div class="tag">
+              <img src="/img/icons/brain-solid.svg" alt="img.difficult" />
+              simple
+            </div>
+            <div class="tag">
+              <img
+                src="/img/icons/calendar-alt-regular.svg"
+                alt="img.calendar"
+              />
+              12.10.2021
+            </div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+        <div class="rechner">
+          <div class="portion-part">
+            <label class="label-recipe" for="multiplier">Zutaten für:</label>
+            <input type="number" id="multiplier" value="1" min="1" max="20" />
+            <button id="calculateButton" class="button button-mgl d_on" onclick="zutatenrechner()">
+              Portionen
+            </button>
+          </div>
+          <table id="myTable">
+            <tr class="tr-bg">
+              <td class="value">500</td>
+              <td>gr Hartweizengries</td>
+            </tr>
+            <tr>
+              <td class="value">2</td>
+              <td>Eier</td>
+            </tr>
+            <tr class="tr-bg">
+              <td class="value">75</td>
+              <td>ml Wasser</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="preparation">
+          <h2>Zubereitung</h2>
+          <div class="shortinfo">
+            <div class="tag">
+              <img
+                src="/img/icons/clock-regular.svg"
+                alt="Zubereitungszeit"
+              />ca.25 Minuten
+            </div>
+            <div class="tag">
+              <img
+                src="/img/icons/clock-regular.svg"
+                alt="Zubereitungszeit Gesamt"
+              />Gesamtzeit ca. 40 Minuten
+            </div>
+          </div>
+          <div>
+            <p>Den Hartweizengries und die 2 Eier mit dem Wasser vermengen bis der Teig nicht mehr klebrig ist und problemlos durch die Nudelmaschine gelangt</p>
+            <p>Danach den Teig 10-15 Minuten ruhen lassen</p>
+            <p>Den Teig mit der Hand nochmal Kneten und in eine längliche dicke Wurst rollen</p>
+            <p>Nun schneidet man etwa Ei große Stücke herunter und rollt diesen durch die Nudelmaschine bis der Teig „Ploppt“ </p>
+            <p>Die Nudeln danach mit der Nudelmaschine oder dem Messer schneiden</p>
+            <p>Die geschnittenen Nudeln nun in kochendes gesalzenes Wasser hineingeben und kochen lassen</p>
+          </div>
+          <div class="spacer-recept"></div>
+        </div>
+      </div>
+      <footer w3-include-html="templ/footer.html"></footer>
+    </div>
+  </body>
+</html>
