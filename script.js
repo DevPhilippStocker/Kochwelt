@@ -77,9 +77,6 @@ function updateContent() {
 }
 
 
-setInterval(updateContent, 10000);
-
-
 // Für das Kontaktformular
 function validateForm() {
   var vorname = document.getElementById("vorname").value;
@@ -95,7 +92,6 @@ function validateForm() {
       return true; 
   }
 }
-
 
 
 // Zutatenrechner
